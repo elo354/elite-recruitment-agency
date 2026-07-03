@@ -19,14 +19,14 @@ const PROCESS_STEPS = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative bg-cream px-[7%] pt-20 pb-24 text-center overflow-hidden">
-        <Parallax speed={0.25} className="absolute -top-24 -left-24 w-[420px] h-[420px] pointer-events-none">
+      <section className="relative bg-cream px-[7%] pt-16 pb-20 text-center overflow-hidden">
+        <Parallax speed={0.2} className="absolute -top-16 -left-16 w-[320px] h-[320px] pointer-events-none">
           <SoftBlob color="navy" />
         </Parallax>
-        <Parallax speed={0.4} className="absolute -bottom-32 -right-16 w-[380px] h-[380px] pointer-events-none">
+        <Parallax speed={0.3} className="absolute -bottom-20 -right-10 w-[300px] h-[300px] pointer-events-none">
           <SoftBlob color="gold" />
         </Parallax>
-        <Parallax speed={0.15} className="hidden lg:block absolute top-10 right-[6%] w-[140px] h-[220px] pointer-events-none opacity-70">
+        <Parallax speed={0.12} className="hidden lg:block absolute top-8 right-[6%] w-[120px] h-[190px] pointer-events-none opacity-70">
           <GoldBotanical />
         </Parallax>
 
@@ -36,7 +36,7 @@ export default function HomePage() {
             <h1 className="font-serif text-4xl sm:text-6xl text-navy leading-tight max-w-3xl mx-auto mb-6">
               Exceptional childcare, <em className="text-gold not-italic">hand-matched</em> to your family.
             </h1>
-            <p className="text-ink/70 max-w-xl mx-auto mb-12 leading-relaxed">
+            <p className="text-ink/70 max-w-xl mx-auto mb-10 leading-relaxed">
               A premium, fully vetted nanny recruitment service for families across the UK — and a
               trusted path to your next placement if you&apos;re a nanny.
             </p>
@@ -47,9 +47,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative px-[7%] py-16 border-b border-border overflow-hidden">
-        <Parallax speed={0.2} className="absolute inset-x-0 -top-16 flex justify-center pointer-events-none">
-          <DottedArc className="w-[800px] h-[400px]" />
+      <section className="relative bg-cream px-[7%] pb-16 overflow-hidden">
+        <Parallax speed={0.15} className="absolute inset-x-0 top-0 flex justify-center pointer-events-none opacity-80">
+          <DottedArc className="w-[700px] h-[280px]" />
         </Parallax>
         <RevealOnScroll className="relative flex flex-wrap justify-center gap-3">
           <TrustBadge icon="shield" label="Enhanced DBS Checked" />
@@ -58,8 +58,8 @@ export default function HomePage() {
         </RevealOnScroll>
       </section>
 
-      <section className="px-[7%] py-24">
-        <RevealOnScroll className="text-center max-w-2xl mx-auto mb-16">
+      <section className="bg-white px-[7%] py-20">
+        <RevealOnScroll className="text-center max-w-2xl mx-auto mb-14">
           <div className="label justify-center flex mb-4">How It Works</div>
           <h2 className="font-serif text-3xl sm:text-4xl text-navy">A refined, effortless process.</h2>
         </RevealOnScroll>

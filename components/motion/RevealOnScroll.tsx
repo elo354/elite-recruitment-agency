@@ -2,6 +2,10 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 
+// Content is always opacity:1 — visibility never depends on an animation
+// trigger firing. The only thing animated is a small settle-into-place
+// rise, so if a browser ever fails to fire the scroll trigger, the worst
+// case is text sitting 14px off from its final spot, never a blank page.
 export default function RevealOnScroll({
   children,
   delay = 0,
@@ -16,10 +20,10 @@ export default function RevealOnScroll({
   return (
     <motion.div
       className={className}
-      initial={prefersReducedMotion ? undefined : { opacity: 0, y: 28 }}
-      whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ y: prefersReducedMotion ? 0 : 14 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
