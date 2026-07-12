@@ -21,10 +21,6 @@ export default function PrivacyPage() {
         <h1 className="font-serif text-4xl sm:text-5xl text-navy mb-6">Privacy Policy</h1>
       </div>
 
-      <div className="max-w-xl mx-auto mb-10 p-4 bg-gold-soft rounded text-xs text-navy-dark text-center">
-        Draft content — review with a solicitor and confirm ICO registration before going live.
-      </div>
-
       <div className="max-w-2xl mx-auto flex flex-col gap-8">
         {SECTIONS.map((section) => (
           <div key={section.title}>
