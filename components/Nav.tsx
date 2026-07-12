@@ -31,31 +31,8 @@ export default function Nav() {
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-ink/80">
-          {LINKS.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-navy transition-colors">
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden lg:flex items-center gap-3">
-          <Link
-            href="/family/brief"
-            className="px-5 py-2.5 rounded text-sm font-medium text-ink/80 hover:text-navy transition-colors"
-          >
-            Find a Nanny
-          </Link>
-          <Link
-            href="/nanny/apply"
-            className="px-5 py-2.5 rounded text-sm font-medium bg-navy text-white hover:bg-navy-dark hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy/25 transition-all"
-          >
-            Apply as a Nanny
-          </Link>
-        </div>
-
         <button
-          className="lg:hidden p-2 text-navy"
+          className="p-2 text-navy"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
@@ -65,7 +42,7 @@ export default function Nav() {
       </div>
 
       {open && (
-        <nav className="lg:hidden flex flex-col gap-1 px-[7%] pb-6 text-sm font-medium text-ink/80 border-t border-border">
+        <nav className="flex flex-col gap-1 px-[7%] pb-6 text-sm font-medium text-ink/80 border-t border-border">
           {LINKS.map((link) => (
             <Link
               key={link.href}

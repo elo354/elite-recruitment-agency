@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import TrustBadge from "@/components/TrustBadge";
-import { ShieldCheck, Users, FileCheck, Lock } from "lucide-react";
+import { Video, Users, FileCheck, Lock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Trust & Vetting | Elite Recruitment Agency",
-  description: "How Elite Recruitment Agency vets every nanny — DBS checks, references, and ongoing standards.",
+  title: "Trust & Vetting | Elite Childcare Recruitment",
+  description: "How Elite Childcare Recruitment vets every nanny — personal interviews, references, and ongoing standards.",
 };
 
 const STAGES = [
-  { icon: ShieldCheck, title: "Enhanced DBS Check", body: "Every nanny undergoes an Enhanced DBS check before being presented to a family, with re-checks at regular intervals." },
+  { icon: Video, title: "Personal Interview", body: "Every candidate is personally interviewed by our team, assessing character, communication and suitability before any introduction is made." },
   { icon: Users, title: "Verified References", body: "A minimum of two professional references, contacted directly by our team — not just claimed on an application." },
   { icon: FileCheck, title: "Identity & Right to Work", body: "Photo ID verification and proof of right to work in the UK, checked before any introduction is made." },
   { icon: Lock, title: "Confidentiality", body: "Every placement is covered by a confidentiality agreement — your family's privacy is treated with the utmost discretion." },
@@ -27,7 +27,7 @@ export default function TrustAndVettingPage() {
       </div>
 
       <div className="flex flex-wrap justify-center gap-3 mb-16">
-        <TrustBadge icon="shield" label="Enhanced DBS Checked" />
+        <TrustBadge icon="shield" label="Right-to-Work Confirmed" />
         <TrustBadge icon="badge" label="References Verified" />
         <TrustBadge icon="star" label="Elite-Vetted Network" />
       </div>

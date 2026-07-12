@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getCurrentProfile } from "@/lib/auth";
 import TrustBadge from "@/components/TrustBadge";
 
-export const metadata = { title: "Dashboard | Elite Recruitment Agency" };
+export const metadata = { title: "Dashboard | Elite Childcare Recruitment" };
 
 const STATUS_LABEL: Record<string, string> = {
   submitted: "Submitted — awaiting review",

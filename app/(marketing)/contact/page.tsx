@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | Elite Recruitment Agency",
-  description: "Get in touch with Elite Recruitment Agency.",
+  title: "Contact | Elite Childcare Recruitment",
+  description: "Get in touch with Elite Childcare Recruitment.",
 };
 
 export default function ContactPage() {

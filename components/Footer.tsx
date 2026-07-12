@@ -78,7 +78,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 px-[7%] py-6 text-xs text-white/40 flex flex-col sm:flex-row justify-between gap-2">
-        <span>© {new Date().getFullYear()} Elite Recruitment Agency. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} Elite Childcare Recruitment. All rights reserved.</span>
         <span>Registered in England &amp; Wales.</span>
       </div>
     </footer>

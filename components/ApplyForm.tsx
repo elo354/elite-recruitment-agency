@@ -63,16 +63,14 @@ export default function ApplyForm() {
         <input
           name="availability"
           required
-          placeholder="e.g. Full-time, Mon–Fri"
           className="px-4 py-3 border border-border rounded text-sm font-normal"
         />
       </label>
 
       <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
-        Rate expectation
+        Salary Expectation
         <input
           name="rate_expectation"
-          placeholder="e.g. £18–22/hr gross"
           className="px-4 py-3 border border-border rounded text-sm font-normal"
         />
       </label>

@@ -17,11 +17,11 @@ const jost = Jost({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://elite-recruitment-agency.vercel.app"),
-  title: "Elite Recruitment Agency | Luxury Nanny Recruitment, UK",
+  title: "Elite Childcare Recruitment | Luxury Nanny Recruitment, UK",
   description:
-    "Elite Recruitment Agency connects discerning UK families with exceptional, fully vetted nannies. Discreet, personal, and built on trust.",
+    "Elite Childcare Recruitment connects discerning UK families with exceptional, fully vetted nannies. Discreet, personal, and built on trust.",
   openGraph: {
-    title: "Elite Recruitment Agency | Luxury Nanny Recruitment, UK",
+    title: "Elite Childcare Recruitment | Luxury Nanny Recruitment, UK",
     description:
       "Premium UK nanny recruitment. We connect discerning families with the finest childcare professionals — with care, discretion and precision.",
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Elite Recruitment Agency | Luxury Nanny Recruitment, UK",
+    title: "Elite Childcare Recruitment | Luxury Nanny Recruitment, UK",
     description: "Premium UK nanny recruitment — discreet, personal and trusted.",
   },
   icons: {

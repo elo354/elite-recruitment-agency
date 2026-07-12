@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FileText, Globe, Star, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "For Nannies | Elite Recruitment Agency",
+  title: "For Nannies | Elite Childcare Recruitment",
   description: "Apply once and get presented to UK families who genuinely value what you bring.",
 };
 
@@ -17,7 +17,7 @@ const REQUIREMENTS = [
   "Evidence of relevant childcare or household experience",
   "Two contactable professional references",
   "Proof of right to work in the UK",
-  "Enhanced DBS check (we'll guide you through this)",
+  "A valid Enhanced DBS check (your own responsibility to obtain and maintain)",
   "A valid form of photo ID for identity verification",
 ];
 

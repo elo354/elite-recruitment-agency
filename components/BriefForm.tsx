@@ -80,10 +80,10 @@ export default function BriefForm() {
       </label>
 
       <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
-        Budget (per week)
+        Salary (per week)
         <input
           name="budget"
-          placeholder="Let us know your weekly budget"
+          placeholder="Let us know your weekly salary"
           className="px-4 py-3 border border-border rounded text-sm font-normal"
         />
       </label>

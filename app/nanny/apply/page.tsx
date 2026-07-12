@@ -1,6 +1,6 @@
 import ApplyForm from "@/components/ApplyForm";
 
-export const metadata = { title: "Apply | Elite Recruitment Agency" };
+export const metadata = { title: "Apply | Elite Childcare Recruitment" };
 
 export default function ApplyPage() {
   return (

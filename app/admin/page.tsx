@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 
-export const metadata = { title: "Admin Overview | Elite Recruitment Agency" };
+export const metadata = { title: "Admin Overview | Elite Childcare Recruitment" };
 
 export default async function AdminOverviewPage() {
   const supabase = await createClient();

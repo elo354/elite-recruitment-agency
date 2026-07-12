@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Reviews | Elite Recruitment Agency",
-  description: "Reviews from families and nannies who've worked with Elite Recruitment Agency.",
+  title: "Reviews | Elite Childcare Recruitment",
+  description: "Reviews from families and nannies who've worked with Elite Childcare Recruitment.",
 };
 
 export default function ReviewsPage() {

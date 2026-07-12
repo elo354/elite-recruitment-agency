@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Elite Recruitment Agency",
-  description: "Terms and conditions for Elite Recruitment Agency's nanny recruitment service.",
+  title: "Terms & Conditions | Elite Childcare Recruitment",
+  description: "Terms and conditions for Elite Childcare Recruitment's nanny recruitment service.",
 };
 
 const SECTIONS = [
-  { title: "1. Introduction", body: "These Terms & Conditions apply to the use of Elite Recruitment Agency and our nanny recruitment services. By contacting us, submitting a form, applying as a nanny, or requesting a nanny placement, you agree to use our service honestly and professionally. Elite Childcare Recruitment LTD, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom." },
-  { title: "2. Definitions", body: "\"Client\" means a family, parent, guardian or household seeking childcare support. \"Candidate\" means a nanny, maternity nurse or childcare professional applying for placement. \"Agency\" means Elite Recruitment Agency." },
+  { title: "1. Introduction", body: "These Terms & Conditions apply to the use of Elite Childcare Recruitment and our nanny recruitment services. By contacting us, submitting a form, applying as a nanny, or requesting a nanny placement, you agree to use our service honestly and professionally. Elite Childcare Recruitment LTD, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom." },
+  { title: "2. Definitions", body: "\"Client\" means a family, parent, guardian or household seeking childcare support. \"Candidate\" means a nanny, maternity nurse or childcare professional applying for placement. \"Agency\" means Elite Childcare Recruitment." },
   { title: "3. Agency Services", body: "We provide recruitment support by introducing suitable nanny candidates to families. Our service acts as an introduction-only agency: we do not employ candidates directly, and the family becomes the legal employer of any nanny they engage. Our service includes consultation, candidate review, remote communication, interview coordination and placement support." },
   { title: "4. Client Responsibilities", body: "Clients agree to provide accurate information about their requirements, to treat candidates fairly and professionally, to comply with all relevant employment law when engaging a nanny directly, and to pay the agreed placement fee upon confirmation of a placement." },
-  { title: "5. Candidate Responsibilities", body: "Candidates agree to provide accurate and honest information about their experience, qualifications and right to work, to cooperate with our vetting process (including DBS checks and reference checks), and to conduct themselves professionally throughout the recruitment process." },
-  { title: "6. Fees", body: "Our placement fees are set out on our Fees page and are payable by the client upon confirmation of a placement, unless otherwise agreed in writing." },
-  { title: "7. Privacy", body: "We handle personal data in accordance with our Privacy Policy and UK data protection law." },
-  { title: "8. Contact", body: "Questions about these Terms can be sent to eliterecruitmentagencies@gmail.com." },
+  { title: "5. Candidate Responsibilities", body: "Candidates agree to provide accurate and honest information about their experience, qualifications and right to work, to cooperate with our vetting process (including reference checks), and to conduct themselves professionally throughout the recruitment process." },
+  { title: "6. DBS Checks", body: "It is the candidate's (nanny's) responsibility to obtain and hold a valid Enhanced DBS check. It is the client's (family's) responsibility to request sight of a candidate's DBS check, to review it and satisfy themselves with its contents, and to confirm the candidate holds a valid DBS check before employing them. The Agency does not arrange, carry out, verify or take any responsibility for DBS checks, and accepts no liability for a client's decision to employ a candidate." },
+  { title: "7. Fees", body: "Our placement fees are set out on our Fees page and are payable by the client upon confirmation of a placement, unless otherwise agreed in writing." },
+  { title: "8. Privacy", body: "We handle personal data in accordance with our Privacy Policy and UK data protection law." },
+  { title: "9. Contact", body: "Questions about these Terms can be sent to eliterecruitmentagencies@gmail.com." },
 ];
 
 export default function TermsPage() {

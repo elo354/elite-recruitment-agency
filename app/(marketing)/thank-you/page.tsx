@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 
-export const metadata = { title: "Thank You | Elite Recruitment Agency" };
+export const metadata = { title: "Thank You | Elite Childcare Recruitment" };
 
 const COPY: Record<string, { heading: string; body: string }> = {
   brief: {

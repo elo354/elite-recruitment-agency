@@ -11,9 +11,9 @@ const PROCESS_STEPS = [
 ];
 
 const WHY_CHOOSE_US = [
-  { icon: HeartHandshake, title: "Deeply Personal", body: "We get to know your family before we ever suggest a candidate." },
+  { icon: HeartHandshake, title: "Deeply Personal", body: "We get to know your family's needs before we suggest a candidate." },
   { icon: Video, title: "Personally Interviewed", body: "Every nanny meets our team before being presented to you." },
-  { icon: ShieldCheck, title: "Multi-Stage Vetting", body: "Enhanced DBS, references and right-to-work — no stone unturned." },
+  { icon: ShieldCheck, title: "Thorough Vetting", body: "References and right-to-work status — personally verified, no stone unturned." },
   { icon: Lock, title: "Absolute Discretion", body: "Every enquiry is handled in the strictest confidence." },
 ];
 
@@ -35,8 +35,8 @@ export default function HomePage() {
             Finding the <em className="text-gold not-italic">right fit</em>, tailored to you.
           </h1>
           <p className="text-white/70 max-w-xl mx-auto leading-relaxed">
-            A premium, fully vetted nanny recruitment service for families across the UK — and a
-            trusted path to your next placement if you&apos;re a nanny.
+            A premium, fully vetted nanny recruitment service — based in the UK, recruiting
+            worldwide — and a trusted path to your next placement if you&apos;re a nanny.
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function HomePage() {
 
       <section className="px-[7%] py-16 border-b border-border">
         <div className="flex flex-wrap justify-center gap-3">
-          <TrustBadge icon="shield" label="Enhanced DBS Checked" />
+          <TrustBadge icon="shield" label="Right-to-Work Confirmed" />
           <TrustBadge icon="badge" label="References Verified" />
           <TrustBadge icon="star" label="Elite-Vetted Network" />
         </div>

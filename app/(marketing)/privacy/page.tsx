@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Elite Recruitment Agency",
-  description: "How Elite Recruitment Agency collects, uses and protects your personal data.",
+  title: "Privacy Policy | Elite Childcare Recruitment",
+  description: "How Elite Childcare Recruitment collects, uses and protects your personal data.",
 };
 
 const SECTIONS = [
-  { title: "What we collect", body: "For families: contact details and information about your childcare requirements. For nannies: contact details, experience, references, DBS certificate and right-to-work documentation." },
-  { title: "Why we collect it", body: "To provide our recruitment and introduction service — matching families with suitable, vetted nanny candidates — and to meet our legal and safeguarding obligations." },
-  { title: "Who can see it", body: "Nanny DBS certificates and reference contact details are only ever visible to our team and the nanny themselves — never to families, even after an introduction is made. Families only see the information a nanny agrees to share as part of their profile." },
+  { title: "What we collect", body: "For families: contact details and information about your childcare requirements. For nannies: contact details, experience, references and right-to-work documentation." },
+  { title: "Why we collect it", body: "To provide our recruitment and introduction service — matching families with suitable, vetted nanny candidates — and to meet our legal obligations." },
+  { title: "Who can see it", body: "Nanny reference contact details are only ever visible to our team and the nanny themselves — never to families, even after an introduction is made. Families only see the information a nanny agrees to share as part of their profile." },
   { title: "How long we keep it", body: "We retain personal data for as long as necessary to provide our service and to meet legal record-keeping obligations, after which it is securely deleted." },
   { title: "Your rights", body: "Under UK GDPR you have the right to access, correct or request deletion of your personal data at any time. Contact eliterecruitmentagencies@gmail.com to make a request." },
 ];

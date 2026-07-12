@@ -1,6 +1,6 @@
 import BriefForm from "@/components/BriefForm";
 
-export const metadata = { title: "Submit Your Brief | Elite Recruitment Agency" };
+export const metadata = { title: "Submit Your Brief | Elite Childcare Recruitment" };
 
 export default function SubmitBriefPage() {
   return (

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "How It Works | Elite Recruitment Agency",
+  title: "How It Works | Elite Childcare Recruitment",
   description: "A refined, effortless recruitment process — from first consultation to confirmed placement.",
 };
 
@@ -10,7 +10,6 @@ const STEPS = [
   { n: "02", title: "Search", body: "Drawing on our network, we discreetly source candidates whose experience, character, and aspirations align with your brief." },
   { n: "03", title: "Selection", body: "A carefully curated shortlist is presented — each candidate personally interviewed, vetted, and chosen with your family in mind." },
   { n: "04", title: "Placement", body: "We coordinate interviews, references, and offer details — guiding both parties seamlessly through to a confirmed placement." },
-  { n: "05", title: "Aftercare", body: "Our relationship continues well beyond placement — supporting both families and nannies through the settling period and beyond." },
 ];
 
 export default function HowItWorksPage() {

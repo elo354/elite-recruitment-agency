@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Clock, CalendarClock, Home as HomeIcon, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "For Families | Elite Recruitment Agency",
+  title: "For Families | Elite Childcare Recruitment",
   description: "Find a fully vetted, hand-matched nanny for your family, anywhere in the UK.",
 };
 
