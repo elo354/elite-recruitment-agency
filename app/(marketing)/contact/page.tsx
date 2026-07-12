@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Elite Recruitment Agency",
@@ -14,8 +15,8 @@ export default function ContactPage() {
         <h1 className="font-serif text-4xl sm:text-5xl text-navy mb-6">Begin your journey with us.</h1>
         <p className="text-ink/70 leading-relaxed">
           Whether you&apos;re a family searching for the ideal nanny, or an experienced nanny
-          seeking your next placement — we&apos;d love to hear from you. For an account and to
-          track your application, use Sign Up above; for a general enquiry, use the form below.
+          seeking your next placement — we&apos;d love to hear from you. Submit a brief or
+          application above, or send us a general enquiry using the form below.
         </p>
       </div>
 
@@ -38,46 +39,33 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="flex items-start gap-4">
+            <MessageCircle className="text-gold mt-1" size={20} aria-hidden="true" />
+            <div>
+              <div className="text-xs text-ink/50 uppercase tracking-wide mb-1">WhatsApp</div>
+              <a
+                href="https://wa.me/447471350428"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-navy font-medium"
+              >
+                +44 7471 350428
+              </a>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
             <MapPin className="text-gold mt-1" size={20} aria-hidden="true" />
             <div>
               <div className="text-xs text-ink/50 uppercase tracking-wide mb-1">Office</div>
               <p className="text-navy font-medium">
-                19–21 Crawford Street
+                71-75 Shelton Street, Covent Garden
                 <br />
-                London, W1H 1PJ
+                London, WC2H 9JQ
               </p>
             </div>
           </div>
         </div>
 
-        <form action="https://formspree.io/f/xqapqlgb" method="POST" className="flex flex-col gap-4">
-          <input
-            name="name"
-            required
-            placeholder="Full Name"
-            className="px-4 py-3 border border-border rounded text-sm"
-          />
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="Email Address"
-            className="px-4 py-3 border border-border rounded text-sm"
-          />
-          <textarea
-            name="message"
-            required
-            rows={5}
-            placeholder="Your Message"
-            className="px-4 py-3 border border-border rounded text-sm resize-none"
-          />
-          <button
-            type="submit"
-            className="px-6 py-3 rounded bg-navy text-white font-semibold hover:bg-navy-dark transition"
-          >
-            Send Message
-          </button>
-        </form>
+        <ContactForm />
       </div>
     </div>
   );

@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import type { Role } from "@/lib/types";
 
 const LINKS = [
   { href: "/for-families", label: "For Families" },
@@ -15,20 +15,21 @@ const LINKS = [
   { href: "/faq", label: "FAQ" },
 ];
 
-function dashboardHref(role: Role) {
-  if (role === "family") return "/family/dashboard";
-  if (role === "nanny") return "/nanny/dashboard";
-  return "/admin";
-}
-
-export default function Nav({ role }: { role: Role | null }) {
+export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
       <div className="flex items-center justify-between px-[7%] h-20">
-        <Link href="/" className="font-serif text-2xl font-medium text-navy tracking-wide">
-          Elite<span className="text-gold">.</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo-lockup-transparent.png"
+            alt="Elite Childcare Recruitment"
+            width={431}
+            height={500}
+            className="h-16 w-auto py-2"
+            priority
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-ink/80">
@@ -40,26 +41,18 @@ export default function Nav({ role }: { role: Role | null }) {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          {role ? (
-            <Link
-              href={dashboardHref(role)}
-              className="px-5 py-2.5 rounded text-sm font-medium bg-navy text-white hover:bg-navy-dark transition-colors"
-            >
-              Dashboard
-            </Link>
-          ) : (
-            <>
-              <Link href="/login" className="text-sm font-medium text-ink/80 hover:text-navy transition-colors">
-                Log In
-              </Link>
-              <Link
-                href="/signup"
-                className="px-5 py-2.5 rounded text-sm font-medium bg-navy text-white hover:bg-navy-dark transition-colors"
-              >
-                Get Started
-              </Link>
-            </>
-          )}
+          <Link
+            href="/family/brief"
+            className="px-5 py-2.5 rounded text-sm font-medium text-ink/80 hover:text-navy transition-colors"
+          >
+            Find a Nanny
+          </Link>
+          <Link
+            href="/nanny/apply"
+            className="px-5 py-2.5 rounded text-sm font-medium bg-navy text-white hover:bg-navy-dark hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy/25 transition-all"
+          >
+            Apply as a Nanny
+          </Link>
         </div>
 
         <button
@@ -78,39 +71,27 @@ export default function Nav({ role }: { role: Role | null }) {
             <Link
               key={link.href}
               href={link.href}
-              className="py-3 border-b border-border/60"
+              className="py-3 px-3 -mx-3 border-b border-l-4 border-l-transparent border-border/60 rounded hover:bg-cream hover:border-l-gold hover:text-navy hover:pl-5 transition-all"
               onClick={() => setOpen(false)}
             >
               {link.label}
             </Link>
           ))}
           <div className="flex flex-col gap-2 mt-4">
-            {role ? (
-              <Link
-                href={dashboardHref(role)}
-                className="px-5 py-3 rounded text-center bg-navy text-white"
-                onClick={() => setOpen(false)}
-              >
-                Dashboard
-              </Link>
-            ) : (
-              <>
-                <Link
-                  href="/login"
-                  className="px-5 py-3 rounded text-center border border-navy text-navy"
-                  onClick={() => setOpen(false)}
-                >
-                  Log In
-                </Link>
-                <Link
-                  href="/signup"
-                  className="px-5 py-3 rounded text-center bg-navy text-white"
-                  onClick={() => setOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </>
-            )}
+            <Link
+              href="/family/brief"
+              className="px-5 py-3 rounded text-center border border-navy text-navy"
+              onClick={() => setOpen(false)}
+            >
+              Find a Nanny
+            </Link>
+            <Link
+              href="/nanny/apply"
+              className="px-5 py-3 rounded text-center bg-navy text-white"
+              onClick={() => setOpen(false)}
+            >
+              Apply as a Nanny
+            </Link>
           </div>
         </nav>
       )}

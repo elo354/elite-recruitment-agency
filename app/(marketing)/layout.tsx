@@ -1,17 +1,16 @@
 import TopBar from "@/components/TopBar";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { getCurrentProfile } from "@/lib/auth";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
-export default async function MarketingLayout({ children }: { children: React.ReactNode }) {
-  const profile = await getCurrentProfile();
-
+export default function MarketingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <TopBar />
-      <Nav role={profile?.role ?? null} />
+      <Nav />
       <main className="flex-1">{children}</main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

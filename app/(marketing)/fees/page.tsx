@@ -19,7 +19,7 @@ export default function FeesPage() {
       </div>
 
       <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div className="p-10 bg-white border border-border rounded-lg">
+        <div className="p-10 bg-white border border-border rounded-lg hover:border-gold hover:-translate-y-1 hover:shadow-lg hover:shadow-navy/10 transition-all">
           <div className="text-3xl mb-3">🏡</div>
           <h3 className="font-serif text-2xl text-navy mb-2">Standard Placements</h3>
           <p className="text-sm text-ink/60 mb-6">Suitable for the majority of private household roles.</p>
@@ -34,7 +34,7 @@ export default function FeesPage() {
           <div className="text-xs text-ink/50">of agreed annual gross salary</div>
         </div>
 
-        <div className="p-10 bg-navy text-white rounded-lg">
+        <div className="p-10 bg-navy text-white rounded-lg hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/20 transition-all">
           <div className="text-3xl mb-3">⭐</div>
           <h3 className="font-serif text-2xl mb-2">Specialist Placements</h3>
           <p className="text-sm text-white/60 mb-6">For complex, high-profile or bespoke requirements.</p>

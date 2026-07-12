@@ -35,7 +35,7 @@ export default function ForNanniesPage() {
 
       <div className="grid sm:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
         {OPTIONS.map((opt) => (
-          <div key={opt.title} className="p-8 bg-white border border-border rounded-lg">
+          <div key={opt.title} className="p-8 bg-white border border-border rounded-lg hover:border-gold hover:-translate-y-1 hover:shadow-lg hover:shadow-navy/10 transition-all">
             <opt.icon className="text-gold mb-4" size={28} aria-hidden="true" />
             <h3 className="font-serif text-xl text-navy mb-2">{opt.title}</h3>
             <p className="text-sm text-ink/60 leading-relaxed">{opt.body}</p>
@@ -54,15 +54,17 @@ export default function ForNanniesPage() {
         </ul>
       </div>
 
-      <div className="max-w-2xl mx-auto text-center bg-cream rounded-lg p-12">
+      <div className="relative max-w-2xl mx-auto text-center bg-cream rounded-lg p-12 overflow-hidden shadow-lg shadow-navy/5">
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light" />
+        <div className="text-4xl mb-4">📋</div>
         <h2 className="font-serif text-2xl text-navy mb-3">Ready to apply?</h2>
         <p className="text-sm text-ink/60 mb-8">
-          Create a nanny account, complete your profile and upload your documents — our team will
-          review your application within a few days.
+          Fill out your profile and tell us about yourself — our team will review your
+          application within a few days.
         </p>
         <Link
-          href="/signup?role=nanny"
-          className="inline-flex items-center gap-2 px-8 py-3.5 rounded bg-navy text-white font-semibold hover:bg-navy-dark transition"
+          href="/nanny/apply"
+          className="inline-flex items-center gap-2 px-8 py-3.5 rounded bg-navy text-white font-semibold hover:bg-navy-dark hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy/25 transition-all"
         >
           Apply Now <ArrowRight size={16} aria-hidden="true" />
         </Link>

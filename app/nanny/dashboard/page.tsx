@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getCurrentProfile } from "@/lib/auth";
 
@@ -14,6 +15,7 @@ const STATUS_LABEL: Record<string, string> = {
 export default async function NannyDashboardPage() {
   const supabase = await createClient();
   const profile = await getCurrentProfile();
+  if (!profile) redirect("/");
 
   const { data: application } = await supabase
     .from("nanny_applications")

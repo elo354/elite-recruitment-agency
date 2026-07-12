@@ -1,4 +1,4 @@
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MessageCircle } from "lucide-react";
 
 export default function TopBar() {
   return (
@@ -6,6 +6,15 @@ export default function TopBar() {
       <a href="tel:+447471350428" className="flex items-center gap-1.5 hover:text-gold transition-colors">
         <Phone size={13} aria-hidden="true" />
         +44 7471 350428
+      </a>
+      <a
+        href="https://wa.me/447471350428"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-1.5 hover:text-gold transition-colors"
+      >
+        <MessageCircle size={13} aria-hidden="true" />
+        WhatsApp
       </a>
       <a
         href="mailto:eliterecruitmentagencies@gmail.com"

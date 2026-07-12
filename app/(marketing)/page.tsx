@@ -1,7 +1,7 @@
 import Link from "next/link";
 import DualCTA from "@/components/DualCTA";
 import TrustBadge from "@/components/TrustBadge";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, HeartHandshake, Video, ShieldCheck, Lock } from "lucide-react";
 
 const PROCESS_STEPS = [
   { n: "01", title: "Consultation", body: "We begin with an in-depth conversation to understand your world — values, schedule, and what matters most." },
@@ -10,18 +10,38 @@ const PROCESS_STEPS = [
   { n: "04", title: "Placement", body: "We coordinate interviews, references and offer details, guiding both parties through to a confirmed placement." },
 ];
 
+const WHY_CHOOSE_US = [
+  { icon: HeartHandshake, title: "Deeply Personal", body: "We get to know your family before we ever suggest a candidate." },
+  { icon: Video, title: "Personally Interviewed", body: "Every nanny meets our team before being presented to you." },
+  { icon: ShieldCheck, title: "Multi-Stage Vetting", body: "Enhanced DBS, references and right-to-work — no stone unturned." },
+  { icon: Lock, title: "Absolute Discretion", body: "Every enquiry is handled in the strictest confidence." },
+];
+
 export default function HomePage() {
   return (
     <>
-      <section className="bg-cream px-[7%] pt-20 pb-24 text-center">
-        <div className="label justify-center flex mb-5">UK Nanny Recruitment</div>
-        <h1 className="font-serif text-4xl sm:text-6xl text-navy leading-tight max-w-3xl mx-auto mb-6">
-          Exceptional childcare, <em className="text-gold not-italic">hand-matched</em> to your family.
-        </h1>
-        <p className="text-ink/70 max-w-xl mx-auto mb-12 leading-relaxed">
-          A premium, fully vetted nanny recruitment service for families across the UK — and a
-          trusted path to your next placement if you&apos;re a nanny.
-        </p>
+      <section className="relative bg-navy px-[7%] pt-24 pb-20 text-center overflow-hidden">
+        <div
+          className="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(245,197,24,0.16), transparent 70%)" }}
+        />
+        <div
+          className="pointer-events-none absolute -bottom-20 -left-20 w-80 h-80 rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(245,197,24,0.1), transparent 70%)" }}
+        />
+        <div className="relative">
+          <div className="label justify-center flex mb-5">UK Nanny Recruitment</div>
+          <h1 className="font-serif text-4xl sm:text-6xl text-white leading-tight max-w-3xl mx-auto mb-6">
+            Finding the <em className="text-gold not-italic">right fit</em>, tailored to you.
+          </h1>
+          <p className="text-white/70 max-w-xl mx-auto leading-relaxed">
+            A premium, fully vetted nanny recruitment service for families across the UK — and a
+            trusted path to your next placement if you&apos;re a nanny.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-cream px-[7%] pt-14 pb-24">
         <DualCTA />
       </section>
 
@@ -57,19 +77,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-navy px-[7%] py-20 text-center text-white">
-        <h2 className="font-serif text-3xl sm:text-4xl mb-4">Ready to begin?</h2>
-        <p className="text-white/70 max-w-lg mx-auto mb-10">
-          Whether you&apos;re searching for the ideal nanny or seeking your next placement, we&apos;d
-          love to hear from you.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link href="/signup?role=family" className="px-8 py-3.5 rounded bg-gold text-navy-dark font-semibold hover:brightness-105 transition">
-            Find a Nanny
-          </Link>
-          <Link href="/signup?role=nanny" className="px-8 py-3.5 rounded border border-white/30 text-white font-semibold hover:bg-white/10 transition">
-            Apply as a Nanny
-          </Link>
+      <section className="bg-cream px-[7%] py-24">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="label justify-center flex mb-4">Why Choose Us</div>
+          <h2 className="font-serif text-3xl sm:text-4xl text-navy">Premium recruitment. Personal service.</h2>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          {WHY_CHOOSE_US.map((item) => (
+            <div
+              key={item.title}
+              className="p-8 bg-white border border-border rounded-lg hover:border-gold hover:-translate-y-1 hover:shadow-lg hover:shadow-navy/10 transition-all"
+            >
+              <item.icon className="text-gold mb-4" size={28} aria-hidden="true" />
+              <h3 className="font-serif text-xl text-navy mb-2">{item.title}</h3>
+              <p className="text-sm text-ink/60 leading-relaxed">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="relative bg-navy px-[7%] py-20 text-center text-white overflow-hidden">
+        <div
+          className="pointer-events-none absolute top-0 left-1/4 w-80 h-80 rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(245,197,24,0.12), transparent 70%)" }}
+        />
+        <div className="relative">
+          <h2 className="font-serif text-3xl sm:text-4xl mb-4">Ready to begin?</h2>
+          <p className="text-white/70 max-w-lg mx-auto mb-10">
+            Whether you&apos;re searching for the ideal nanny or seeking your next placement, we&apos;d
+            love to hear from you.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/family/brief"
+              className="px-8 py-3.5 rounded bg-gold text-navy-dark font-semibold hover:brightness-105 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold/30 transition-all"
+            >
+              Find a Nanny
+            </Link>
+            <Link
+              href="/nanny/apply"
+              className="px-8 py-3.5 rounded border border-white/30 text-white font-semibold hover:bg-white/10 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 transition-all"
+            >
+              Apply as a Nanny
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -11,8 +11,9 @@ export default function DualCTA() {
     <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
       <Link
         href="/for-families"
-        className="group flex flex-col items-start gap-4 p-8 bg-white border border-border rounded-lg hover:border-gold hover:shadow-lg transition-all"
+        className="group relative flex flex-col items-start gap-4 p-8 bg-white border border-border rounded-lg overflow-hidden hover:border-gold hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/10 transition-all"
       >
+        <span className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light scale-x-0 group-hover:scale-x-100 origin-left transition-transform" />
         <span className="p-3 rounded-full bg-navy/5 text-navy">
           <Users size={26} aria-hidden="true" />
         </span>
@@ -29,8 +30,9 @@ export default function DualCTA() {
 
       <Link
         href="/for-nannies"
-        className="group flex flex-col items-start gap-4 p-8 bg-white border border-border rounded-lg hover:border-gold hover:shadow-lg transition-all"
+        className="group relative flex flex-col items-start gap-4 p-8 bg-white border border-border rounded-lg overflow-hidden hover:border-gold hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/10 transition-all"
       >
+        <span className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light scale-x-0 group-hover:scale-x-100 origin-left transition-transform" />
         <span className="p-3 rounded-full bg-gold-soft text-navy-dark">
           <Briefcase size={26} aria-hidden="true" />
         </span>

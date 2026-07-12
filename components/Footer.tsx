@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const COLUMNS = [
   {
@@ -7,7 +8,7 @@ const COLUMNS = [
       { href: "/for-families", label: "For Families" },
       { href: "/how-it-works", label: "How It Works" },
       { href: "/fees", label: "Fees" },
-      { href: "/signup?role=family", label: "Submit a Brief" },
+      { href: "/family/brief", label: "Submit a Brief" },
     ],
   },
   {
@@ -15,7 +16,7 @@ const COLUMNS = [
     links: [
       { href: "/for-nannies", label: "For Nannies" },
       { href: "/trust-and-vetting", label: "Trust & Vetting" },
-      { href: "/signup?role=nanny", label: "Apply Now" },
+      { href: "/nanny/apply", label: "Apply Now" },
     ],
   },
   {
@@ -32,7 +33,6 @@ const COLUMNS = [
       { href: "/policies", label: "Agency Policies" },
       { href: "/terms", label: "Terms & Conditions" },
       { href: "/privacy", label: "Privacy Policy" },
-      { href: "/cookies", label: "Cookie Policy" },
     ],
   },
 ];
@@ -42,15 +42,22 @@ export default function Footer() {
     <footer className="bg-navy-dark text-white/80 mt-auto">
       <div className="px-[7%] py-16 grid grid-cols-2 md:grid-cols-5 gap-10">
         <div className="col-span-2 md:col-span-1">
-          <div className="font-serif text-2xl text-white mb-3">
-            Elite<span className="text-gold">.</span>
+          <Image
+            src="/logo-icon-transparent.png"
+            alt=""
+            width={216}
+            height={216}
+            className="h-12 w-auto mb-3"
+          />
+          <div className="font-serif text-lg font-medium text-white tracking-wide mb-3">
+            Elite Childcare Recruitment
           </div>
           <p className="text-sm leading-relaxed text-white/60">
-            Elite Recruitment Agency
+            Elite Childcare Recruitment LTD
             <br />
-            Office No. 332, 19–21 Crawford Street
+            71-75 Shelton Street, Covent Garden
             <br />
-            London, W1H 1PJ, United Kingdom
+            London, WC2H 9JQ, United Kingdom
           </p>
         </div>
 

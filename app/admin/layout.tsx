@@ -13,7 +13,7 @@ const TABS = [
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const profile = await getCurrentProfile();
 
-  if (!profile) redirect("/login");
+  if (!profile) redirect("/");
   if (profile.role !== "admin") redirect(profile.role === "nanny" ? "/nanny/dashboard" : "/family/dashboard");
 
   return (

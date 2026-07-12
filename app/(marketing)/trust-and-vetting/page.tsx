@@ -34,7 +34,10 @@ export default function TrustAndVettingPage() {
 
       <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {STAGES.map((stage) => (
-          <div key={stage.title} className="p-8 bg-white border border-border rounded-lg">
+          <div
+            key={stage.title}
+            className="p-8 bg-white border border-border rounded-lg hover:border-gold hover:-translate-y-1 hover:shadow-lg hover:shadow-navy/10 transition-all"
+          >
             <stage.icon className="text-gold mb-4" size={28} aria-hidden="true" />
             <h3 className="font-serif text-xl text-navy mb-2">{stage.title}</h3>
             <p className="text-sm text-ink/60 leading-relaxed">{stage.body}</p>

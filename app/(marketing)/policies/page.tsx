@@ -28,7 +28,10 @@ export default function PoliciesPage() {
 
       <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {POLICIES.map((policy) => (
-          <div key={policy.title} className="p-8 bg-white border-t-[3px] border-t-gold border border-border rounded">
+          <div
+            key={policy.title}
+            className="p-8 bg-white border-t-[3px] border-t-gold border border-border rounded hover:-translate-y-1 hover:shadow-lg hover:shadow-navy/10 transition-all"
+          >
             <div className="text-2xl mb-3" aria-hidden="true">{policy.emoji}</div>
             <h3 className="font-serif text-xl text-navy mb-2">{policy.title}</h3>
             <p className="text-sm text-ink/60 leading-relaxed">{policy.body}</p>
