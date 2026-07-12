@@ -17,14 +17,6 @@ export default function ReviewsPage() {
           come in.
         </p>
       </div>
-
-      <div className="max-w-lg mx-auto text-center bg-cream rounded-lg p-12">
-        <p className="text-sm text-ink/60">
-          No reviews published yet — check back soon, or{" "}
-          <a href="/contact" className="text-navy font-semibold underline">get in touch</a>{" "}
-          if you&apos;d like to share your experience with us directly.
-        </p>
-      </div>
     </div>
   );
 }
