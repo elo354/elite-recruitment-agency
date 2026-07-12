@@ -10,7 +10,6 @@ const LINKS = [
   { href: "/for-nannies", label: "For Nannies" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/trust-and-vetting", label: "Trust & Vetting" },
-  { href: "/reviews", label: "Reviews" },
   { href: "/fees", label: "Fees" },
   { href: "/faq", label: "FAQ" },
 ];
