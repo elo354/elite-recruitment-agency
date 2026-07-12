@@ -26,10 +26,6 @@ export default function TermsPage() {
         <p className="text-ink/70 leading-relaxed">Please read our agency terms carefully.</p>
       </div>
 
-      <div className="max-w-xl mx-auto mb-10 p-4 bg-gold-soft rounded text-xs text-navy-dark text-center">
-        Draft content — review with a solicitor before this is treated as legally binding.
-      </div>
-
       <div className="max-w-2xl mx-auto flex flex-col gap-8">
         {SECTIONS.map((section) => (
           <div key={section.title}>
