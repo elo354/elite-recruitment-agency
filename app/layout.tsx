@@ -37,6 +37,26 @@ export const metadata: Metadata = {
   },
 };
 
+const STRUCTURED_DATA = {
+  "@context": "https://schema.org",
+  "@type": "EmploymentAgency",
+  name: "Elite Childcare Recruitment",
+  legalName: "Elite Childcare Recruitment LTD",
+  description:
+    "Premium UK nanny recruitment agency connecting discerning families with fully vetted, hand-matched nannies. Based in the UK, recruiting worldwide.",
+  url: "https://elite-recruitment-agency.vercel.app",
+  telephone: "+447471350428",
+  email: "eliterecruitmentagencies@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "71-75 Shelton Street, Covent Garden",
+    addressLocality: "London",
+    postalCode: "WC2H 9JQ",
+    addressCountry: "GB",
+  },
+  areaServed: "GB",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -44,6 +64,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB" className={`${cormorant.variable} ${jost.variable} h-full antialiased`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
