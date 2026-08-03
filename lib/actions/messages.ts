@@ -9,7 +9,7 @@ export async function sendMessage(formData: FormData) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/login");
+  if (!user) redirect("/");
 
   const introductionId = String(formData.get("introduction_id") ?? "");
   const body = String(formData.get("body") ?? "").trim();

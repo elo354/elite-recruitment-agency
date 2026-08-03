@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getCurrentProfile } from "@/lib/auth";
 import TrustBadge from "@/components/TrustBadge";
 
-export const metadata = { title: "Dashboard | Elite Recruitment Agency" };
+export const metadata = { title: "Dashboard | Elite Childcare Recruitment" };
 
 const STATUS_LABEL: Record<string, string> = {
   submitted: "Submitted — awaiting review",
@@ -16,6 +17,7 @@ const STATUS_LABEL: Record<string, string> = {
 export default async function FamilyDashboardPage() {
   const supabase = await createClient();
   const profile = await getCurrentProfile();
+  if (!profile) redirect("/");
 
   const { data: briefs } = await supabase
     .from("family_briefs")

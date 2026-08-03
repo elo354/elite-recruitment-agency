@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Reviews | Elite Recruitment Agency",
-  description: "Reviews from families and nannies who've worked with Elite Recruitment Agency.",
+  title: "Reviews | Elite Childcare Recruitment",
+  description: "Reviews from families and nannies who've worked with Elite Childcare Recruitment.",
 };
 
 export default function ReviewsPage() {
@@ -15,14 +15,6 @@ export default function ReviewsPage() {
           We&apos;re a growing agency, and every placement we complete adds to our track record.
           Genuine reviews from families and nannies we&apos;ve worked with will appear here as they
           come in.
-        </p>
-      </div>
-
-      <div className="max-w-lg mx-auto text-center bg-cream rounded-lg p-12">
-        <p className="text-sm text-ink/60">
-          No reviews published yet — check back soon, or{" "}
-          <a href="/contact" className="text-navy font-semibold underline">get in touch</a>{" "}
-          if you&apos;d like to share your experience with us directly.
         </p>
       </div>
     </div>

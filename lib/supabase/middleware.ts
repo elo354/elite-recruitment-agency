@@ -1,14 +1,14 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-const PROTECTED_PREFIXES = ["/family", "/nanny", "/admin"];
+const PROTECTED_PREFIXES = ["/admin"];
 
 export async function updateSession(request: NextRequest) {
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co",
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-anon-key",
     {
       cookies: {
         getAll() {
@@ -34,9 +34,7 @@ export async function updateSession(request: NextRequest) {
   );
 
   if (isProtected && !user) {
-    const loginUrl = new URL("/login", request.url);
-    loginUrl.searchParams.set("redirectTo", request.nextUrl.pathname);
-    return NextResponse.redirect(loginUrl);
+    return NextResponse.redirect(new URL("/", request.url));
   }
 
   return response;

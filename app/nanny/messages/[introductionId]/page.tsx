@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getCurrentProfile } from "@/lib/auth";
 import MessageThread from "@/components/MessageThread";
@@ -11,6 +11,7 @@ export default async function NannyMessagesPage({
   const { introductionId } = await params;
   const supabase = await createClient();
   const profile = await getCurrentProfile();
+  if (!profile) redirect("/");
 
   const { data: introduction } = await supabase
     .from("introductions")

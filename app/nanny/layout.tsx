@@ -1,17 +1,16 @@
-import { redirect } from "next/navigation";
-import DashboardHeader from "@/components/DashboardHeader";
-import { getCurrentProfile } from "@/lib/auth";
+import TopBar from "@/components/TopBar";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
-export default async function NannyLayout({ children }: { children: React.ReactNode }) {
-  const profile = await getCurrentProfile();
-
-  if (!profile) redirect("/login");
-  if (profile.role !== "nanny") redirect(profile.role === "family" ? "/family/dashboard" : "/admin");
-
+export default function NannyLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col bg-cream">
-      <DashboardHeader label="Nanny Account" />
-      <main className="flex-1 px-[7%] py-12">{children}</main>
-    </div>
+    <>
+      <TopBar />
+      <Nav />
+      <main className="flex-1 bg-cream px-[7%] py-12">{children}</main>
+      <Footer />
+      <WhatsAppButton />
+    </>
   );
 }
