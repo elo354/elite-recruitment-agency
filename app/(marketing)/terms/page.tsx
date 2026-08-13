@@ -1,39 +1,41 @@
-import type { Metadata } from "next";
+import { createClient } from "@/lib/supabase/server";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions | Elite Childcare Recruitment",
-  description: "Terms and conditions for Elite Childcare Recruitment's nanny recruitment service.",
-};
+export const metadata = { title: "Family Briefs | Admin" };
 
-const SECTIONS = [
-  { title: "1. Introduction", body: "These Terms & Conditions apply to the use of Elite Childcare Recruitment and our nanny recruitment services. By contacting us, submitting a form, applying as a nanny, or requesting a nanny placement, you agree to use our service honestly and professionally. Elite Childcare Recruitment LTD, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom." },
-  { title: "2. Definitions", body: "\"Client\" means a family, parent, guardian or household seeking childcare support. \"Candidate\" means a nanny, maternity nurse or childcare professional applying for placement. \"Agency\" means Elite Childcare Recruitment." },
-  { title: "3. Agency Services", body: "We provide recruitment support by introducing suitable nanny candidates to families. Our service acts as an introduction-only agency: we do not employ candidates directly, and the family becomes the legal employer of any nanny they engage. Our service includes consultation, candidate review, remote communication, interview coordination and placement support." },
-  { title: "4. Client Responsibilities", body: "Clients agree to provide accurate information about their requirements, to treat candidates fairly and professionally, to comply with all relevant employment law when engaging a nanny directly, and to pay the agreed placement fee upon confirmation of a placement." },
-  { title: "5. Candidate Responsibilities", body: "Candidates agree to provide accurate and honest information about their experience, qualifications and right to work, to cooperate with our vetting process (including reference checks), and to conduct themselves professionally throughout the recruitment process." },
-  { title: "6. DBS Checks", body: "It is the candidate's (nanny's) responsibility to obtain and hold a valid Enhanced DBS check. It is the client's (family's) responsibility to request sight of a candidate's DBS check, to review it and satisfy themselves with its contents, and to confirm the candidate holds a valid DBS check before employing them. The Agency does not arrange, carry out, verify or take any responsibility for DBS checks, and accepts no liability for a client's decision to employ a candidate." },
-  { title: "7. Fees", body: "Our placement fees are set out on our Fees page and are payable by the client upon confirmation of a placement, unless otherwise agreed in writing." },
-  { title: "8. Privacy", body: "We handle personal data in accordance with our Privacy Policy and UK data protection law." },
-  { title: "9. Contact", body: "Questions about these Terms can be sent to eliterecruitmentagencies@gmail.com." },
-];
+export default async function AdminBriefsPage() {
+  const supabase = await createClient();
 
-export default function TermsPage() {
+  const { data: briefs } = await supabase
+    .from("family_briefs")
+    .select("*, profiles(full_name, email, phone)")
+    .order("created_at", { ascending: false });
+
   return (
-    <div className="px-[7%] py-20">
-      <div className="max-w-2xl mx-auto text-center mb-14">
-        <div className="label justify-center flex mb-4">Terms</div>
-        <h1 className="font-serif text-4xl sm:text-5xl text-navy mb-6">Terms &amp; Conditions</h1>
-        <p className="text-ink/70 leading-relaxed">Please read our agency terms carefully.</p>
-      </div>
+    <div className="max-w-4xl mx-auto flex flex-col gap-6">
+      <h1 className="font-serif text-3xl text-navy mb-2">Family Briefs</h1>
 
-      <div className="max-w-2xl mx-auto flex flex-col gap-8">
-        {SECTIONS.map((section) => (
-          <div key={section.title}>
-            <h2 className="font-serif text-xl text-navy mb-2">{section.title}</h2>
-            <p className="text-sm text-ink/70 leading-relaxed">{section.body}</p>
+      {(!briefs || briefs.length === 0) && <p className="text-sm text-ink/50">No briefs submitted yet.</p>}
+
+      {briefs?.map((brief) => (
+        <div key={brief.id} className="bg-white border border-border rounded-lg p-6">
+          <div className="flex items-start justify-between gap-4 mb-3">
+            <div>
+              <h2 className="font-serif text-xl text-navy">{brief.profiles?.full_name}</h2>
+              <p className="text-xs text-ink/50">
+                {brief.profiles?.email} · {brief.profiles?.phone}
+              </p>
+            </div>
+            <span className="text-xs font-semibold uppercase tracking-wide text-gold shrink-0">{brief.status}</span>
           </div>
-        ))}
-      </div>
+          <p className="text-sm text-ink/70 mb-1">
+            <strong>{brief.location}</strong> · {brief.hours_needed}
+          </p>
+          <p className="text-xs text-ink/50 mb-2">
+            Budget: {brief.budget ?? "—"} · Start: {brief.start_date ?? "flexible"}
+          </p>
+          {brief.requirements && <p className="text-sm text-ink/60">{brief.requirements}</p>}
+        </div>
+      ))}
     </div>
   );
 }
