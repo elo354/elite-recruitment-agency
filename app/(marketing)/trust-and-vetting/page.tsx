@@ -4,12 +4,12 @@ import { Video, Users, FileCheck, Lock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Trust & Vetting | Elite Childcare Recruitment",
-  description: "How Elite Childcare Recruitment vets every nanny — personal interviews, references, and ongoing standards.",
+  description: "How Elite Childcare Recruitment reviews every nanny — personal interviews, suitability checks and ongoing standards.",
 };
 
 const STAGES = [
   { icon: Video, title: "Personal Interview", body: "Every candidate is personally interviewed by our team, assessing character, communication and suitability before any introduction is made." },
-  { icon: Users, title: "Verified References", body: "A minimum of two professional references, contacted directly by our team — not just claimed on an application." },
+  { icon: Users, title: "Personal Application Review", body: "Every application is reviewed personally, with experience, availability and suitability considered before an introduction is made." },
   { icon: FileCheck, title: "Identity & Right to Work", body: "Photo ID verification and proof of right to work in the UK, checked before any introduction is made." },
   { icon: Lock, title: "Confidentiality", body: "Every placement is covered by a confidentiality agreement — your family's privacy is treated with the utmost discretion." },
 ];
@@ -28,7 +28,7 @@ export default function TrustAndVettingPage() {
 
       <div className="flex flex-wrap justify-center gap-3 mb-16">
         <TrustBadge icon="shield" label="Right-to-Work Confirmed" />
-        <TrustBadge icon="badge" label="References Verified" />
+        <TrustBadge icon="badge" label="Personally Reviewed" />
         <TrustBadge icon="star" label="Elite-Vetted Network" />
       </div>
 
