@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -35,8 +34,18 @@ export default function FeesPage() {
             <li>✓ Live-Out Nannies</li>
             <li>✓ Nanny Housekeepers</li>
           </ul>
+
           <div className="text-2xl font-serif text-gold">12%</div>
-          <div className="text-xs text-ink/50">of agreed annual gross salary</div>
+          <div className="text-xs text-ink/50">
+            of agreed annual gross salary
+          </div>
+
+          <div className="mt-5 pt-5 border-t border-border">
+            <div className="text-2xl font-serif text-gold">20%</div>
+            <div className="text-xs text-ink/50">
+              of agreed annual gross salary for international nanny placements
+            </div>
+          </div>
         </div>
 
         <div className="p-10 bg-white border border-border rounded-lg hover:border-gold hover:-translate-y-1 hover:shadow-lg hover:shadow-navy/10 transition-all">
@@ -54,8 +63,11 @@ export default function FeesPage() {
             <li>✓ Newborn Care Specialists</li>
             <li>✓ Private Household Placements</li>
           </ul>
+
           <div className="text-2xl font-serif text-gold">12%</div>
-          <div className="text-xs text-ink/50">of agreed annual gross salary</div>
+          <div className="text-xs text-ink/50">
+            of agreed annual gross salary
+          </div>
 
           <div className="mt-5 pt-5 border-t border-border">
             <div className="text-2xl font-serif text-gold">20%</div>
