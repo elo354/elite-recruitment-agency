@@ -27,6 +27,16 @@ export default function ApplyForm() {
       </label>
 
       <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
+        Job reference or position applied for
+        <input
+          name="job_reference"
+          required
+          placeholder="Enter the job reference or position"
+          className="px-4 py-3 border border-border rounded text-sm font-normal"
+        />
+      </label>
+
+      <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
         Email
         <input
           name="email"
@@ -42,6 +52,16 @@ export default function ApplyForm() {
           name="phone"
           type="tel"
           required
+          className="px-4 py-3 border border-border rounded text-sm font-normal"
+        />
+      </label>
+
+      <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
+        Current town or postcode
+        <input
+          name="location"
+          required
+          placeholder="For example: Chelsea or SW3"
           className="px-4 py-3 border border-border rounded text-sm font-normal"
         />
       </label>
@@ -108,11 +128,20 @@ export default function ApplyForm() {
       </label>
 
       <label className="flex items-start gap-3 text-sm text-ink/80">
-        <input type="checkbox" name="consent" required className="mt-1 shrink-0" />
+        <input
+          type="checkbox"
+          name="consent"
+          required
+          className="mt-1 shrink-0"
+        />
         <span>
-          I consent to Elite Childcare Recruitment LTD storing and using my details for
-          recruitment, placement and contact purposes in line with the{" "}
-          <Link href="/privacy" className="text-navy underline hover:text-gold">
+          I consent to Elite Childcare Recruitment LTD storing and using my
+          details for recruitment, placement and contact purposes in line with
+          the{" "}
+          <Link
+            href="/privacy"
+            className="text-navy underline hover:text-gold"
+          >
             Privacy Policy
           </Link>
           .
