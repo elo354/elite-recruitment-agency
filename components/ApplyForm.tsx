@@ -10,7 +10,11 @@ export default function ApplyForm() {
   );
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form
+      onSubmit={handleSubmit}
+      encType="multipart/form-data"
+      className="flex flex-col gap-4"
+    >
       <input type="hidden" name="_subject" value="New Nanny Application" />
 
       <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
@@ -55,7 +59,10 @@ export default function ApplyForm() {
 
       <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
         Certifications (paediatric first aid, Norland, etc.)
-        <input name="certifications" className="px-4 py-3 border border-border rounded text-sm font-normal" />
+        <input
+          name="certifications"
+          className="px-4 py-3 border border-border rounded text-sm font-normal"
+        />
       </label>
 
       <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
@@ -73,6 +80,20 @@ export default function ApplyForm() {
           name="rate_expectation"
           className="px-4 py-3 border border-border rounded text-sm font-normal"
         />
+      </label>
+
+      <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
+        Upload your CV
+        <input
+          name="cv"
+          type="file"
+          accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          required
+          className="px-4 py-3 border border-border rounded text-sm font-normal bg-white"
+        />
+        <span className="text-xs font-normal text-ink/60">
+          Please upload your most recent CV in PDF, DOC or DOCX format.
+        </span>
       </label>
 
       <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
