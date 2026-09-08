@@ -10,12 +10,12 @@ export default function ApplyForm() {
   );
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      encType="multipart/form-data"
-      className="flex flex-col gap-4"
-    >
-      <input type="hidden" name="_subject" value="New Nanny Application" />
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Nanny Application"
+      />
 
       <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
         Full name
@@ -102,19 +102,15 @@ export default function ApplyForm() {
         />
       </label>
 
-      <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
-        Upload your CV
-        <input
-          name="cv"
-          type="file"
-          accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-          required
-          className="px-4 py-3 border border-border rounded text-sm font-normal bg-white"
-        />
-        <span className="text-xs font-normal text-ink/60">
-          Please upload your most recent CV in PDF, DOC or DOCX format.
-        </span>
-      </label>
+      <div className="rounded border border-border bg-white px-4 py-3 text-sm text-ink/80">
+        Please email your CV separately to{" "}
+        <a
+          href="mailto:eliterecruitmentagencies@gmail.com"
+          className="font-semibold text-navy underline"
+        >
+          eliterecruitmentagencies@gmail.com
+        </a>
+      </div>
 
       <label className="flex flex-col gap-1.5 text-sm font-medium text-ink/80">
         About you
@@ -134,6 +130,7 @@ export default function ApplyForm() {
           required
           className="mt-1 shrink-0"
         />
+
         <span>
           I consent to Elite Childcare Recruitment LTD storing and using my
           details for recruitment, placement and contact purposes in line with
