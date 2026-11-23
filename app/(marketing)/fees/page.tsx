@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+
+      import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Recruitment Fees | Elite Childcare Recruitment",
@@ -23,6 +24,10 @@ export default function FeesPage() {
           right fit for families seeking the highest standards of childcare.
           Our placement fee depends on the type of role and is confirmed before
           a placement is made.
+        </p>
+
+        <p className="text-ink/70 leading-relaxed mt-4 font-medium">
+          Registration fee: £45
         </p>
       </div>
 
